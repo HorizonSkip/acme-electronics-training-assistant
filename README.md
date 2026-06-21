@@ -205,8 +205,4 @@ This project demonstrates how modern AI systems can transform static documentati
 
 AI Generalist | Workflow Automation | RAG Systems | AI Applications
 
-GitHub: [HorizonSkip](https://github.com/HorizonSkip?utm_source=chatgpt.com)
-
----
-
-One thing I'd strongly suggest: add a GIF of the chatbot answering questions from your uploaded PDFs. Recruiters spend 15–30 seconds on a repo. A 10-second demo GIF often does more than 500 lines of README text.
+GitHub: [HorizonSkip](https://github.com/HorizonSkip)
