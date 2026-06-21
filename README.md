@@ -1,36 +1,228 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Acme Electronics Training Assistant
 
-## Getting Started
+AI-powered Employee Training & Knowledge Assistant built with RAG, Vector Search, Supabase, OpenAI, and n8n.
 
-First, run the development server:
+An intelligent workplace assistant that enables employees to instantly search company knowledge, learn procedures, access SOPs, receive grounded answers from internal documentation, and complete AI-generated training assessments.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+
+### AI Knowledge Assistant
+
+* Natural language chat interface
+* Answers grounded in company documentation
+* Context-aware conversations
+* Source citations for transparency
+* Conversation history persistence
+
+### Retrieval Augmented Generation (RAG)
+
+* Semantic document search
+* OpenAI embeddings
+* Vector similarity matching
+* Multi-document knowledge base
+* Context injection into AI responses
+
+### Document Management
+
+* PDF upload and ingestion
+* Automatic chunking
+* Embedding generation
+* Knowledge base indexing
+* Admin document management
+
+### Employee Training
+
+* AI-generated quizzes
+* Multiple-choice questions
+* Scenario-based assessments
+* Long-form response evaluation
+* Personalized learning recommendations
+
+### Authentication & User Management
+
+* Secure authentication
+* Role-based access control
+* Admin dashboard
+* Protected knowledge base
+
+## Tech Stack
+
+### Frontend
+
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+* Supabase Auth
+
+### Backend & AI
+
+* OpenAI GPT Models
+* OpenAI Embeddings
+* n8n Workflow Automation
+* Retrieval Augmented Generation (RAG)
+
+### Database
+
+* Supabase
+* PostgreSQL
+* pgvector
+
+### Infrastructure
+
+* Vercel
+* Supabase Storage
+* Docker
+* Local n8n Deployment
+
+## Architecture
+
+```text
+User
+ │
+ ▼
+Next.js Frontend
+ │
+ ▼
+Supabase
+ │
+ ├── Authentication
+ ├── Conversation Storage
+ ├── Document Storage
+ └── Vector Database
+          │
+          ▼
+      n8n Workflows
+          │
+          ▼
+     OpenAI APIs
+          │
+          ▼
+     Grounded Response
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Knowledge Base Workflow
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+PDF Upload
+    │
+    ▼
+Supabase Storage
+    │
+    ▼
+n8n Processing Workflow
+    │
+    ├── Extract Text
+    ├── Chunk Document
+    ├── Generate Embeddings
+    └── Store Vectors
+    │
+    ▼
+Vector Database Ready
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Chat Workflow
 
-## Learn More
+```text
+User Question
+      │
+      ▼
+Generate Embedding
+      │
+      ▼
+Vector Search
+      │
+      ▼
+Retrieve Relevant Chunks
+      │
+      ▼
+Build Context
+      │
+      ▼
+OpenAI Response
+      │
+      ▼
+Return Answer + Sources
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Demonstrated Skills
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project demonstrates practical experience with:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* Retrieval Augmented Generation (RAG)
+* Semantic Search
+* OpenAI Embeddings
+* Vector Databases
+* PostgreSQL
+* pgvector
+* AI Application Development
+* Workflow Automation
+* Authentication Systems
+* Role-Based Access Control
+* Document Processing Pipelines
+* Knowledge Management Systems
+* Full Stack Development
+* API Integration
+* Cloud Deployment
 
-## Deploy on Vercel
+## Example Use Cases
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Employee Onboarding
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> "What documents do I need to complete during onboarding?"
+
+### HR & Policies
+
+> "How many casual leaves am I entitled to?"
+
+### IT Support
+
+> "What is the company's password policy?"
+
+### Customer Service
+
+> "What is the warranty process for returned products?"
+
+### Learning & Assessment
+
+> "Generate a quiz on workplace security policies."
+
+## Screenshots
+
+Add screenshots here:
+
+```text
+/docs/screenshots/chat-interface.png
+/docs/screenshots/admin-dashboard.png
+/docs/screenshots/document-upload.png
+/docs/screenshots/quiz-dashboard.png
+```
+
+## Future Enhancements
+
+* Multi-tenant architecture
+* Voice interaction
+* Learning analytics dashboard
+* Department-specific assistants
+* Advanced reporting
+* Agentic workflows
+* Slack and Teams integration
+* Automated onboarding journeys
+
+## Project Motivation
+
+Most organizations store critical knowledge across PDFs, SOPs, policy documents, and training manuals that employees struggle to navigate efficiently.
+
+This project demonstrates how modern AI systems can transform static documentation into an interactive knowledge assistant that improves onboarding, reduces support overhead, and accelerates employee learning.
+
+## Author
+
+**Xitij Thorat**
+
+AI Generalist | Workflow Automation | RAG Systems | AI Applications
+
+GitHub: [HorizonSkip](https://github.com/HorizonSkip?utm_source=chatgpt.com)
+
+---
+
+One thing I'd strongly suggest: add a GIF of the chatbot answering questions from your uploaded PDFs. Recruiters spend 15–30 seconds on a repo. A 10-second demo GIF often does more than 500 lines of README text.
