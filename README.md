@@ -189,11 +189,9 @@ This project demonstrates practical experience with:
 
 ## Screenshots
 
-<img width="1919" height="899" alt="image" src="https://github.com/user-attachments/assets/5fe8d456-950f-4e6b-b07c-cca7f0994f28" />
-
-<img width="1919" height="899" alt="image" src="https://github.com/user-attachments/assets/b7f63bf0-ca68-4549-b998-a04d49c88a36" />
-
-<img width="1919" height="899" alt="image" src="https://github.com/user-attachments/assets/5b4610c3-f328-483d-9687-f4952c1bd0c8" />
+<img width="1919" height="912" alt="image" src="https://github.com/user-attachments/assets/96cf50cb-3050-4125-a8dd-d44e08929651" />
+<img width="1919" height="899" alt="image" src="https://github.com/user-attachments/assets/14c5d7cc-41d0-42ed-b1c9-d354851b19e3" />
+<img width="1919" height="899" alt="image" src="https://github.com/user-attachments/assets/0c88a702-f934-42fc-af13-4620c26f1d91" />
 
 
 ## Future Enhancements
