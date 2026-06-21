@@ -193,18 +193,6 @@ This project demonstrates practical experience with:
 <img width="1919" height="899" alt="image" src="https://github.com/user-attachments/assets/14c5d7cc-41d0-42ed-b1c9-d354851b19e3" />
 <img width="1919" height="899" alt="image" src="https://github.com/user-attachments/assets/0c88a702-f934-42fc-af13-4620c26f1d91" />
 
-
-## Future Enhancements
-
-* Multi-tenant architecture
-* Voice interaction
-* Learning analytics dashboard
-* Department-specific assistants
-* Advanced reporting
-* Agentic workflows
-* Slack and Teams integration
-* Automated onboarding journeys
-
 ## Project Motivation
 
 Most organizations store critical knowledge across PDFs, SOPs, policy documents, and training manuals that employees struggle to navigate efficiently.
