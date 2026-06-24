@@ -28,10 +28,10 @@ export default function AdminPage() {
   async function uploadDocument() {
     if (!file) {alert("Please select a PDF");return;}
     setUploading(true);
-    const fileName = `${Date.now()}-${file.name}`;
+    const fileName = `${file.name}`;
     const { error: storageError } = await supabase.storage.from("documents").upload(fileName, file);
     if (storageError) {alert(storageError.message); setUploading(false);return;}
-    const { error: dbError } = await supabase.from("acme_documents").insert({title: file.name.replace(".pdf", ""),filename: file.name,bucket_path: fileName,processed: false});
+    const { error: dbError } = await supabase.from("acme_documents").insert({filename: file.name.replace(".pdf", ""),processed: false});
     if (dbError) {alert(dbError.message);} else {alert("Document uploaded successfully");}
     loadDocuments();
     setUploading(false);
@@ -51,7 +51,7 @@ export default function AdminPage() {
        <button onClick={uploadDocument} disabled={uploading} className="mt-4 px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition">{uploading ? "Uploading..." : "Upload Document"}</button>
       </div>
       <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-800"><h2 className="text-xl font-semibold mb-4">Documents</h2>
-       <div className="space-y-2">{documents.map((doc) => (<div key={doc.id}className="border rounded p-3 flex justify-between"><div>{doc.filename}</div><div>{doc.processed ? "✅ Processed" : "⏳ Pending"}</div></div>))}</div>
+       <div className="space-y-2">{documents.map((doc) => (<div key={doc.id}className="border rounded p-3 flex justify-between"><div>{doc.filename}</div><div>{doc.processed === "true" ? "✅ Processed" : "⏳ Pending"}</div></div>))}</div>
       </div>
     </div>
   );
