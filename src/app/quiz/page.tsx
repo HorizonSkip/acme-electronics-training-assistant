@@ -123,13 +123,14 @@ export default function QuizPage() {
      className="flex-1 bg-gray-800 rounded px-4 py-2 outline-none"onKeyDown={(e) => {if (e.key === "Enter") {handleSend();}}}/>
      <button onClick={handleSend}disabled={quizComplete && !evaluationComplete}className={`px-4 py-2 rounded ${quizComplete && !evaluationComplete? "bg-gray-600 cursor-not-allowed": "bg-blue-600"}`}>{buttonText}</button>
      {quizComplete && !evaluationComplete && !resultsSubmitted && (
-      <button disabled={isSubmitting} onClick={async () => {setIsSubmitting(true);await supabase.from("quizzes").update({user_answers: answers,status: "submitted",}).eq("id", quizId);setIsWaiting(true);
-       setMessages((prev) => [...prev,{role: "assistant",content: "Evaluating your answers...",},]);}} className={`px-4 py-2 rounded ${isSubmitting? "bg-gray-500 cursor-not-allowed opacity-50": "bg-yellow-600 hover:bg-yellow-700"}`}>
-        {isSubmitting ? "Submitting..." : "Submit Quiz"}</button>
+      <button disabled={isSubmitting} onClick={async () => {
+       setIsSubmitting(true); await supabase.from("quizzes").update({user_answers: answers,status: "submitted",}).eq("id", quizId); setIsWaiting(true);
+        setMessages((prev) => [...prev, {role: "assistant",content: "Evaluating your answers...",} ,]);}}
+       className={`px-4 py-2 rounded ${isSubmitting? "bg-gray-500 cursor-not-allowed opacity-50": "bg-yellow-600 hover:bg-yellow-700"}`}>
+       {isSubmitting ? "Submitting..." : "Submit Quiz"}</button>
      {evaluationComplete && results && !resultsSubmitted && (<button onClick={() => {setResultsSubmitted(true);}}className="bg-green-600 px-4 py-2 rounded">Show Results</button>)}
     </div>
    </div>
   </div>
  );
-
 }
