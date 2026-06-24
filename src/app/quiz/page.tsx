@@ -127,7 +127,7 @@ export default function QuizPage() {
        setIsSubmitting(true); await supabase.from("quizzes").update({user_answers: answers,status: "submitted",}).eq("id", quizId); setIsWaiting(true);
         setMessages((prev) => [...prev, {role: "assistant",content: "Evaluating your answers...",} ,]);}}
        className={`px-4 py-2 rounded ${isSubmitting? "bg-gray-500 cursor-not-allowed opacity-50": "bg-yellow-600 hover:bg-yellow-700"}`}>
-       {isSubmitting ? "Submitting..." : "Submit Quiz"}</button>
+       {isSubmitting ? "Submitting..." : "Submit Quiz"}</button>)}
      {evaluationComplete && results && !resultsSubmitted && (<button onClick={() => {setResultsSubmitted(true);}}className="bg-green-600 px-4 py-2 rounded">Show Results</button>)}
     </div>
    </div>
